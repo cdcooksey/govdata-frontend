@@ -7,6 +7,8 @@ export default DS.Model.extend({
   timelyResponse: DS.attr('string'),
   consumerDisputed: DS.attr('string'),
   submittedVia: DS.attr('string'),
+  companyId: DS.attr('string'),
+  companyName: DS.attr('string'),
   createdAt: DS.attr('string'),
   updatedAt: DS.attr('string'),
   consumerComplaintCompanies: DS.belongsTo('consumer-complaint-company'),

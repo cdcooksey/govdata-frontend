@@ -10,6 +10,7 @@
         <th>Timely response</th>
         <th>disputed</th>
         <th>submitted via</th>
+        <th>Company</th>
     </tr>
     </thead>
     <tbody>
@@ -22,6 +23,11 @@
             <td>{{complaint.timelyResponse}}</td>
             <td>{{complaint.disputed}}</td>
             <td>{{complaint.submittedVia}}</td>
+            <td>
+                {{#link-to 'consumer-complaint-companies.show' complaint}}
+                    {{complaint.companyName}}
+                {{/link-to}}
+            </td>
         </tr>
     {{/each}}
     </tbody>
