@@ -9,9 +9,9 @@ export default DS.Model.extend({
   submittedVia: DS.attr('string'),
   createdAt: DS.attr('string'),
   updatedAt: DS.attr('string'),
-  consumerComplaintCompany: DS.belongsTo('consumer-complaint-company')
-  // consumerComplaintProduct: DS.belongsTo('consumer-complaint-product'),
-  // consumerComplaintSubproduct: DS.belongsTo('consumer-complaint-subproduct'),
-  // consumerComplaintIssue: DS.belongsTo('consumer-complaint-issue'),
-  // consumerComplaintSubissue: DS.belongsTo('consumer-complaint-subissue')
+  consumerComplaintCompany: DS.belongsTo('consumer-complaint-company'),
+  consumerComplaintProduct: DS.belongsTo('consumer-complaint-product'),
+  consumerComplaintSubproduct: DS.belongsTo('consumer-complaint-subproduct'),
+  consumerComplaintIssue: DS.belongsTo('consumer-complaint-issue'),
+  consumerComplaintSubissue: DS.belongsTo('consumer-complaint-subissue')
 });

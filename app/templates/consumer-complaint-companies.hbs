@@ -14,6 +14,21 @@
     </tr>
     </thead>
     <tbody>
-
+    {{#each model.consumerComplaints as |complaint|}}
+        <tr>
+            <td>{{complaint.id}}</td>
+            <td>{{complaint.complaintId}}</td>
+            <td>{{complaint.dateReceived}}</td>
+            <td>{{complaint.dateSentToCompany}}</td>
+            <td>{{complaint.timelyResponse}}</td>
+            <td>{{complaint.disputed}}</td>
+            <td>{{complaint.submittedVia}}</td>
+            <td>
+                {{#link-to 'consumer-complaint-companies.show' complaint.consumerComplaintCompany.id}}
+                    {{complaint.consumerComplaintCompany.name}}
+                {{/link-to}}
+            </td>
+        </tr>
+    {{/each}}
     </tbody>
 </table>
