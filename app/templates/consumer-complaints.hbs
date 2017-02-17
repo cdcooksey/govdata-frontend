@@ -24,8 +24,8 @@
             <td>{{complaint.disputed}}</td>
             <td>{{complaint.submittedVia}}</td>
             <td>
-                {{#link-to 'consumer-complaint-companies.show' complaint}}
-                    {{complaint.companyName}}
+                {{#link-to 'consumer-complaint-companies.show' complaint.consumerComplaintCompany.id}}
+                    {{complaint.consumerComplaintCompany.name}}
                 {{/link-to}}
             </td>
         </tr>

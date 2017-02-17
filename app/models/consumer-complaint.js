@@ -7,13 +7,11 @@ export default DS.Model.extend({
   timelyResponse: DS.attr('string'),
   consumerDisputed: DS.attr('string'),
   submittedVia: DS.attr('string'),
-  companyId: DS.attr('string'),
-  companyName: DS.attr('string'),
   createdAt: DS.attr('string'),
   updatedAt: DS.attr('string'),
-  consumerComplaintCompanies: DS.belongsTo('consumer-complaint-company'),
-  consumerComplaintProducts: DS.belongsTo('consumer-complaint-product'),
-  consumerComplaintSubproducts: DS.belongsTo('consumer-complaint-subproduct'),
-  consumerComplaintIssues: DS.belongsTo('consumer-complaint-issue'),
-  consumerComplaintSubissues: DS.belongsTo('consumer-complaint-subissue')
+  consumerComplaintCompany: DS.belongsTo('consumer-complaint-company')
+  // consumerComplaintProduct: DS.belongsTo('consumer-complaint-product'),
+  // consumerComplaintSubproduct: DS.belongsTo('consumer-complaint-subproduct'),
+  // consumerComplaintIssue: DS.belongsTo('consumer-complaint-issue'),
+  // consumerComplaintSubissue: DS.belongsTo('consumer-complaint-subissue')
 });
