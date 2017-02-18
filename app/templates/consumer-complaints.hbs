@@ -19,7 +19,7 @@
     {{#each model as |complaint|}}
         <tr>
             <td>
-                {{#link-to 'consumer-complaint-companies.show' complaint.consumerComplaintCompany.id}}
+                {{#link-to 'consumer-complaint-companies' complaint.consumerComplaintCompany.id}}
                     {{complaint.consumerComplaintCompany.name}}
                 {{/link-to}}
             </td>
