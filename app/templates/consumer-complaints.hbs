@@ -3,31 +3,44 @@
 <table id="complaints">
     <thead>
     <tr>
-        <th>id</th>
-        <th>complaint id</th>
-        <th>Date received</th>
-        <th>Date sent to company</th>
+        <th>Company</th>
+        <th>Product</th>
+        <th>Subproduct</th>
+        <th>Received</th>
+        <th>Sent to company</th>
         <th>Timely response</th>
         <th>disputed</th>
+        <th>Issue</th>
+        <th>SubIssue</th>
         <th>submitted via</th>
-        <th>Company</th>
     </tr>
     </thead>
     <tbody>
     {{#each model as |complaint|}}
         <tr>
-            <td>{{complaint.id}}</td>
-            <td>{{complaint.complaintId}}</td>
+            <td>
+                {{#link-to 'consumer-complaint-companies' complaint.consumerComplaintCompany.id}}
+                    {{complaint.consumerComplaintCompany.name}}
+                {{/link-to}}
+            </td>
+            <td>
+                {{complaint.consumerComplaintProduct.name}}
+            </td>
+            <td>
+                {{complaint.cnsomerComplaintSubproduct.name}}
+            </td>
             <td>{{complaint.dateReceived}}</td>
             <td>{{complaint.dateSentToCompany}}</td>
             <td>{{complaint.timelyResponse}}</td>
             <td>{{complaint.disputed}}</td>
-            <td>{{complaint.submittedVia}}</td>
+
             <td>
-                {{#link-to 'consumer-complaint-companies.show' complaint}}
-                    {{complaint.companyName}}
-                {{/link-to}}
+                {{complaint.consumerComplaintIssue.name}}
             </td>
+            <td>
+                {{complaint.consumerComplaintSubissue.name}}
+            </td>
+            <td>{{complaint.submittedVia}}</td>
         </tr>
     {{/each}}
     </tbody>
