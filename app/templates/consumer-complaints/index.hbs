@@ -22,6 +22,11 @@
                 {{/link-to}}
             </td>
             <td>
+                {{#link-to 'consumer-complaints.consumer-complaint-product' complaint.consumerComplaintProduct.id }}
+                    {{complaint.consumerComplaintProduct.name}}
+                {{/link-to}}
+            </td>
+            <td>
                 {{complaint.cnsomerComplaintSubproduct.name}}
             </td>
             <td>{{complaint.dateReceived}}</td>
