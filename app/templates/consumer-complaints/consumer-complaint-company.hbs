@@ -1,1 +1,43 @@
-{{outlet}}
+Did the company template render? <br />
+<table id="complaints">
+    <thead>
+    <tr>
+        <th>Company</th>
+        <th>Product</th>
+        <th>Subproduct</th>
+        <th>Received</th>
+        <th>Sent to company</th>
+        <th>Timely response</th>
+        <th>disputed</th>
+        <th>Issue</th>
+        <th>SubIssue</th>
+        <th>submitted via</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each consumer-complaints as |complaint|}}
+        <tr>
+            <td>
+                {{#link-to 'consumer-complaints.consumer-complaint-company' complaint.consumerComplaintCompany.id }}
+                    {{complaint.consumerComplaintCompany.name}}
+                {{/link-to}}
+            </td>
+            <td>
+                {{complaint.cnsomerComplaintSubproduct.name}}
+            </td>
+            <td>{{complaint.dateReceived}}</td>
+            <td>{{complaint.dateSentToCompany}}</td>
+            <td>{{complaint.timelyResponse}}</td>
+            <td>{{complaint.disputed}}</td>
+
+            <td>
+                {{complaint.consumerComplaintIssue.name}}
+            </td>
+            <td>
+                {{complaint.consumerComplaintSubissue.name}}
+            </td>
+            <td>{{complaint.submittedVia}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
