@@ -19,12 +19,9 @@
     {{#each model as |complaint|}}
         <tr>
             <td>
-                {{#link-to 'consumer-complaint-companies' complaint.consumerComplaintCompany.id}}
+                {{#link-to 'consumer-complaints' (query-params consumer_complaint_company_id=complaint.consumerComplaintCompany.id) }}
                     {{complaint.consumerComplaintCompany.name}}
                 {{/link-to}}
-            </td>
-            <td>
-                {{complaint.consumerComplaintProduct.name}}
             </td>
             <td>
                 {{complaint.cnsomerComplaintSubproduct.name}}
