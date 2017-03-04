@@ -27,7 +27,9 @@
                 {{/link-to}}
             </td>
             <td>
-                {{complaint.cnsomerComplaintSubproduct.name}}
+                {{#link-to 'consumer-complaints.consumer-complaint-subproduct' complaint.cnsomerComplaintSubproduct.id }}
+                    {{complaint.cnsomerComplaintSubproduct.name}}
+                {{/link-to}}
             </td>
             <td>{{complaint.dateReceived}}</td>
             <td>{{complaint.dateSentToCompany}}</td>
@@ -35,10 +37,14 @@
             <td>{{complaint.disputed}}</td>
 
             <td>
-                {{complaint.consumerComplaintIssue.name}}
+                {{#link-to 'consumer-complaints.consumer-complaint-issue' complaint.consumerComplaintIssue.id }}
+                    {{complaint.consumerComplaintIssue.name}}
+                {{/link-to}}
             </td>
             <td>
-                {{complaint.consumerComplaintSubissue.name}}
+                {{#link-to 'consumer-complaints.consumer-complaint-subissue' complaint.consumerComplaintSubissue.id }}
+                    {{complaint.consumerComplaintSubissue.name}}
+                {{/link-to}}
             </td>
             <td>{{complaint.submittedVia}}</td>
         </tr>
