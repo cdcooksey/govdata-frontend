@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('consumer-complaints', function() {
-    this.route('consumer-complaint-company');
+    this.route('consumer-complaint-company', { path: 'consumer-complaint-company/:id' });
   });
   // this.route('consumer-complaints-companies', { path: 'consumer-complaints/:consumer_complaint_company_id' } )
 });
