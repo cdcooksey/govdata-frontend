@@ -16,7 +16,7 @@
     </tr>
     </thead>
     <tbody>
-    {{#each model as |complaint|}}
+    {{#each consumer-complaints as |complaint|}}
         <tr>
             <td>
                 {{#link-to 'consumer-complaints' (query-params consumer_complaint_company_id=complaint.consumerComplaintCompany.id) }}
