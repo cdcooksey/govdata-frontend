@@ -4,6 +4,7 @@
         <th>Company</th>
         <th>Product</th>
         <th>Subproduct</th>
+        <th>Zip Code</th>
         <th>Received</th>
         <th>Sent to company</th>
         <th>Timely response</th>
@@ -29,6 +30,11 @@
             <td>
                 {{#link-to 'consumer-complaints.consumer-complaint-subproduct' complaint.cnsomerComplaintSubproduct.id }}
                     {{complaint.cnsomerComplaintSubproduct.name}}
+                {{/link-to}}
+            </td>
+            <td>
+                {{#link-to 'consumer-complaints.consumer-complaint-zip-code' complaint.consumerComplaintZipCode.id }}
+                    {{complaint.consumerComplaintZipCode.name}}
                 {{/link-to}}
             </td>
             <td>{{complaint.dateReceived}}</td>
