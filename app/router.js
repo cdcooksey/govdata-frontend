@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('consumer-complaint-subproduct', { path: 'consumer-complaint-subproduct/:id' });
     this.route('consumer-complaint-issue',      { path: 'consumer-complaint-issue/:id' });
     this.route('consumer-complaint-subissue',   { path: 'consumer-complaint-subissue/:id' });
+    this.route('consumer-complaint-zip-code',   { path: 'consumer-complaint-zip-code/:id' });
   });
 });
 
