@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model(params) {
-        return this.get('store').query('consumer-complaint', { consumer_complaint_subissue_id params.id } );
+        return this.get('store').query('consumer-complaint', { consumer_complaint_subissue_id: params.id } );
     },
 
     setupController(controller, model) {
