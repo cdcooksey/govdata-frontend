@@ -1,28 +1,2 @@
 <h2>List of Consumer Complaints</h2>
-
-<table id="complaints">
-    <thead>
-    <tr>
-        <th>id</th>
-        <th>complaint id</th>
-        <th>Date received</th>
-        <th>Date sent to company</th>
-        <th>Timely response</th>
-        <th>disputed</th>
-        <th>submitted via</th>
-    </tr>
-    </thead>
-    <tbody>
-    {{#each model as |complaint|}}
-        <tr>
-            <td>{{complaint.id}}</td>
-            <td>{{complaint.complaintId}}</td>
-            <td>{{complaint.dateReceived}}</td>
-            <td>{{complaint.dateSentToCompany}}</td>
-            <td>{{complaint.timelyResponse}}</td>
-            <td>{{complaint.disputed}}</td>
-            <td>{{complaint.submittedVia}}</td>
-        </tr>
-    {{/each}}
-    </tbody>
-</table>
+{{outlet}}
